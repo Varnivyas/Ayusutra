@@ -1,0 +1,685 @@
+/* ================================
+   AyurSutra - Main Styles
+   ================================ */
+
+:root {
+  --green: #176b4b;
+  --green-dark: #0e4e38;
+  --green-light: #eaf5ed;
+  --mint: #f4faf5;
+  --text: #173c31;
+  --muted: #64766f;
+  --gold: #b9974f;
+  --white: #ffffff;
+  --border: #dce9df;
+  --shadow: 0 15px 40px rgba(25, 80, 56, 0.10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: #fbfefb;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.section {
+  width: min(1240px, 92%);
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.3px;
+  margin-bottom: 12px;
+}
+
+.leaf {
+  position: fixed;
+  color: #c9e5d0;
+  font-size: 70px;
+  opacity: .42;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.leaf-1 { left: -18px; top: 120px; transform: rotate(-25deg); }
+.leaf-2 { right: -20px; top: 300px; transform: rotate(35deg); }
+.leaf-3 { left: -30px; bottom: 150px; transform: rotate(20deg); }
+.leaf-4 { right: -25px; bottom: 30px; transform: rotate(-20deg); }
+
+/* NAVBAR */
+.navbar {
+  width: min(1240px, 92%);
+  height: 86px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--green);
+  color: white;
+  font-size: 23px;
+}
+
+.brand h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.brand span {
+  display: block;
+  font-size: 8px;
+  margin-top: 5px;
+  color: #6f7d77;
+  letter-spacing: .2px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+nav a {
+  font-size: 13px;
+  color: #52635c;
+  font-weight: 600;
+  transition: .25s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--green);
+}
+
+.nav-cta {
+  background: var(--green);
+  color: white !important;
+  padding: 13px 24px;
+  border-radius: 25px;
+  box-shadow: 0 8px 18px rgba(23, 107, 75, .18);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  font-size: 27px;
+  color: var(--green);
+}
+
+/* HERO */
+.hero {
+  min-height: 505px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0 70px;
+}
+
+.hero-content {
+  padding-left: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 5.2vw, 76px);
+  line-height: .98;
+  color: var(--text);
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: var(--green);
+}
+
+.hero-text {
+  width: min(560px, 100%);
+  margin: 24px 0 28px;
+  line-height: 1.8;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+  box-shadow: 0 9px 22px rgba(23, 107, 75, .18);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--green-dark);
+}
+
+.btn-secondary {
+  background: white;
+  border: 1px solid #bdd1c4;
+  color: var(--green);
+}
+
+.btn-secondary:hover {
+  background: var(--green-light);
+}
+
+.hero-visual {
+  min-height: 400px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.hero-circle {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: #e6f2e9;
+  right: 4%;
+}
+
+.hero-image-wrap {
+  width: 480px;
+  height: 335px;
+  max-width: 100%;
+  border-radius: 48% 45% 12% 12%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--shadow);
+  background: #e7f1e8;
+}
+
+.hero-image-wrap img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.herb {
+  position: absolute;
+  z-index: 3;
+  font-size: 38px;
+}
+
+.herb-a { left: 5%; bottom: 17%; }
+.herb-b { right: 2%; top: 14%; transform: rotate(25deg); }
+.herb-c { right: 5%; bottom: 13%; }
+
+/* SECTION HEADINGS */
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2,
+.about h2,
+.contact h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.1;
+}
+
+/* THERAPIES */
+.therapies {
+  padding: 38px 0 90px;
+}
+
+.therapy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.therapy-card {
+  background: white;
+  border: 1px solid #e3ece5;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(30, 70, 50, .06);
+  transition: .3s;
+}
+
+.therapy-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow);
+}
+
+.therapy-image {
+  height: 142px;
+  position: relative;
+  overflow: hidden;
+}
+
+.therapy-image img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.therapy-card:hover .therapy-image img {
+  transform: scale(1.06);
+}
+
+.therapy-icon {
+  position: absolute;
+  left: 50%;
+  bottom: -19px;
+  transform: translateX(-50%);
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green);
+  border: 4px solid white;
+  color: white;
+  font-size: 18px;
+}
+
+.therapy-icon.red {
+  background: #bd5a5e;
+}
+
+.therapy-content {
+  padding: 35px 17px 18px;
+  text-align: center;
+}
+
+.therapy-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.therapy-content p {
+  min-height: 65px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.explore-btn {
+  margin-top: 11px;
+  border: 0;
+  background: transparent;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.explore-btn span {
+  margin-left: 5px;
+}
+
+/* ABOUT */
+.about {
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.about-image {
+  height: 390px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.about-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about h2 span {
+  color: var(--green);
+}
+
+.about-content > p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+  max-width: 560px;
+}
+
+.about-points {
+  margin-top: 25px;
+  display: grid;
+  gap: 14px;
+  color: #4c6259;
+  font-size: 14px;
+}
+
+.about-points span {
+  color: var(--green);
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* FEATURES */
+.features {
+  padding: 75px 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.feature-box {
+  background: var(--mint);
+  border: 1px solid #dbeadf;
+  padding: 28px;
+  border-radius: 20px;
+  transition: .25s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  background: #eef8f0;
+}
+
+.feature-box > span {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.feature-box h3 {
+  margin: 15px 0 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+
+.feature-box p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* CONTACT */
+.contact {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 55px 65px;
+  border-radius: 28px;
+  background: #eaf5ed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.contact h2 {
+  font-size: 36px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: #71817a;
+  font-size: 12px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-brand strong {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: var(--green);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background: rgba(11, 44, 31, .48);
+  z-index: 100;
+  backdrop-filter: blur(4px);
+}
+
+.modal.show {
+  display: grid;
+}
+
+.modal-card {
+  width: min(500px, 100%);
+  background: white;
+  padding: 42px;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0 25px 70px rgba(0,0,0,.2);
+}
+
+.modal-card h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.modal-card > p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  border: 0;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  color: #60756b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1050px) {
+  .therapy-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 75px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    background: white;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 35px;
+  }
+
+  .hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    min-height: 310px;
+  }
+
+  .hero-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-image-wrap {
+    height: 270px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand span {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .therapy-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .therapy-card {
+    max-width: 390px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .therapy-image {
+    height: 190px;
+  }
+
+  .about-image {
+    height: 300px;
+  }
+
+  .contact {
+    padding: 40px 25px;
+  }
+
+  .contact h2 {
+    font-size: 29px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

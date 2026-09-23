@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AyurSutra | Panchakarma Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Decorative leaves -->
+  <div class="leaf leaf-1">❧</div>
+  <div class="leaf leaf-2">❧</div>
+  <div class="leaf leaf-3">❧</div>
+  <div class="leaf leaf-4">❧</div>
+
+  <header class="navbar">
+    <a href="#home" class="brand">
+      <div class="brand-mark">✦</div>
+      <div>
+        <h2>AyurSutra</h2>
+        <span>Panchakarma Management & Therapy Scheduling Software</span>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="#home" class="active">Home</a>
+      <a href="#panchakarma">Panchakarma</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="#panchakarma" class="nav-cta">Get Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">ANCIENT WISDOM • MODERN MANAGEMENT</p>
+
+        <h1>Healing Through<br><span>Panchakarma</span></h1>
+
+        <p class="hero-text">
+          AyurSutra is a centralized web-based system designed to simplify
+          Panchakarma patient management, therapy scheduling and follow-ups —
+          for better care, organized workflows and healthier outcomes.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#panchakarma" class="btn btn-primary">
+            Explore Panchakarma <span>→</span>
+          </a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-circle"></div>
+        <div class="hero-image-wrap">
+          <img
+            src="images/hero.png"
+            alt="Ayurvedic wellness setup"
+          />
+        </div>
+        <div class="herb herb-a">🌿</div>
+        <div class="herb herb-b">🌿</div>
+        <div class="herb herb-c">🍃</div>
+      </div>
+    </section>
+
+    <!-- THERAPIES -->
+    <section class="therapies section" id="panchakarma">
+      <div class="section-heading">
+        <p class="eyebrow">THE FIVE PILLARS OF PANCHAKARMA</p>
+        <h2>Our Core Panchakarma Therapies</h2>
+      </div>
+
+      <div class="therapy-grid">
+
+        <article class="therapy-card">
+          <div class="therapy-image">
+           <img src="images/vamana.webp" alt="Vamana therapy">
+            <div class="therapy-icon">🌿</div>
+          </div>
+          <div class="therapy-content">
+            <h3>Vamana</h3>
+            <p>Therapeutic emesis performed under expert supervision as a traditional Panchakarma cleansing procedure.</p>
+            <button class="explore-btn" data-therapy="Vamana">Explore <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="therapy-card">
+          <div class="therapy-image">
+             <img src="images/virechana.jpg" alt="Virechana therapy">
+            <div class="therapy-icon">♢</div>
+          </div>
+          <div class="therapy-content">
+            <h3>Virechana</h3>
+            <p>Therapeutic purgation traditionally used for cleansing and balancing according to the patient's condition.</p>
+            <button class="explore-btn" data-therapy="Virechana">Explore <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="therapy-card">
+          <div class="therapy-image">
+           <img src="images/basti.webp" alt="Basti therapy">
+            <div class="therapy-icon red">♧</div>
+          </div>
+          <div class="therapy-content">
+            <h3>Basti</h3>
+            <p>Medicated enema therapy traditionally used in Panchakarma and planned according to individual requirements.</p>
+            <button class="explore-btn" data-therapy="Basti">Explore <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="therapy-card">
+          <div class="therapy-image">
+           <img src="images/nasya.jpeg" alt="Nasya therapy">
+            <div class="therapy-icon">♨</div>
+          </div>
+          <div class="therapy-content">
+            <h3>Nasya</h3>
+            <p>Nasal administration of selected medicines traditionally associated with the care of the head and upper body.</p>
+            <button class="explore-btn" data-therapy="Nasya">Explore <span>→</span></button>
+          </div>
+        </article>
+
+        <article class="therapy-card">
+          <div class="therapy-image">
+            <img src="images/rakta.jpg" alt="Raktamokshana therapy">
+            <div class="therapy-icon">◉</div>
+          </div>
+          <div class="therapy-content">
+            <h3>Rakta Mokshana</h3>
+           <p>A traditional bloodletting procedure performed with appropriate assessment and trained professional supervision.</p>
+            <button class="explore-btn" data-therapy="Rakta Mokshana">Explore <span>→</span></button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=85" alt="Ayurvedic wellness">
+      </div>
+
+      <div class="about-content">
+        <p class="eyebrow">ABOUT AYURSUTRA</p>
+        <h2>Traditional healing,<br><span>organized for today.</span></h2>
+        <p>
+          AyurSutra brings patient records, therapy planning, therapist
+          allocation, medicines and follow-ups into one centralized system.
+        </p>
+
+        <div class="about-points">
+          <div><span>✓</span> Centralized patient records</div>
+          <div><span>✓</span> Personalized therapy scheduling</div>
+          <div><span>✓</span> Therapist allocation and tracking</div>
+          <div><span>✓</span> Follow-up and treatment history</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features section" id="features">
+      <div class="section-heading">
+        <p class="eyebrow">SMARTER MANAGEMENT</p>
+        <h2>Designed for Better Care</h2>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-box">
+          <span>01</span>
+          <h3>Patient Management</h3>
+          <p>Maintain complete and organized patient information in one place.</p>
+        </div>
+        <div class="feature-box">
+          <span>02</span>
+          <h3>Therapy Scheduling</h3>
+          <p>Plan procedures according to patient requirements and physician advice.</p>
+        </div>
+        <div class="feature-box">
+          <span>03</span>
+          <h3>Therapist Allocation</h3>
+          <p>Assign therapists and keep the daily therapy workflow organized.</p>
+        </div>
+        <div class="feature-box">
+          <span>04</span>
+          <h3>Follow-Up</h3>
+          <p>Track treatment history, progress and future appointments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="contact section" id="contact">
+      <div>
+        <p class="eyebrow">BEGIN YOUR JOURNEY</p>
+        <h2>Bring the wisdom of Ayurveda<br>into a smarter workflow.</h2>
+      </div>
+      <a href="#panchakarma" class="btn btn-primary">Get Started <span>→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <strong>AyurSutra</strong>
+      <span>Panchakarma Management & Therapy Scheduling Software</span>
+    </div>
+    <p>© 2026 AyurSutra. Designed for modern Ayurvedic care.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="therapyModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose">×</button>
+      <p class="eyebrow">PANChAKARMA THERAPY</p>
+      <h2 id="modalTitle">Therapy</h2>
+      <p id="modalText"></p>
+      <button class="btn btn-primary" id="modalAction">Schedule Therapy →</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
