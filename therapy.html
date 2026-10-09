@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore traditional Panchakarma therapies and patient care information at AyurSutra.">
+    <title>AyurSutra | Panchakarma Therapies</title>
+    <link rel="stylesheet" href="therapy.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="brand">
+        <span class="brand-icon">✦</span>
+        <span>AyurSutra<small>Panchakarma Management & Therapy Scheduling</small></span>
+    </a>
+    <a href="index.html" class="back-link">← Back to Home</a>
+</header>
+
+<main>
+    <section class="therapy-hero">
+        <div class="hero-content">
+            <p class="eyebrow">AYURSUTRA · TRADITIONAL AYURVEDA</p>
+            <h1 id="therapy-title">Vamana</h1>
+            <h2 id="therapy-subtitle">Traditional Panchakarma Therapy</h2>
+            <p id="therapy-intro" class="intro"></p>
+            <a href="#overview" class="primary-btn">Explore Therapy ↓</a>
+        </div>
+
+        <div class="hero-image-wrap">
+            <img id="therapy-image" src="images/vamana.webp"
+                 alt="Panchakarma therapy">
+        </div>
+    </section>
+
+    <section class="overview section" id="overview">
+        <p class="eyebrow">AN INTRODUCTION</p>
+        <h2>Understanding <span id="overview-name">Vamana</span></h2>
+        <p id="therapy-description" class="section-intro"></p>
+    </section>
+
+    <section class="information section">
+        <div class="info-card">
+            <span class="info-icon">🌿</span>
+            <h3>Traditional Purpose</h3>
+            <p id="therapy-purpose"></p>
+        </div>
+
+        <div class="info-card">
+            <span class="info-icon">🪷</span>
+            <h3>Clinical Approach</h3>
+            <p id="therapy-approach"></p>
+        </div>
+
+        <div class="info-card">
+            <span class="info-icon">✨</span>
+            <h3>Potential Benefits</h3>
+            <p id="therapy-benefits"></p>
+        </div>
+    </section>
+
+    <section class="process-section section">
+        <div class="section-heading">
+            <p class="eyebrow">THE TRADITIONAL METHOD</p>
+            <h2 id="process-heading">How Vamana Is Performed</h2>
+            <p id="process-intro"></p>
+        </div>
+
+        <div class="procedure-timeline" id="process-steps"></div>
+
+        <div class="safety-box">
+            <span>ⓘ</span>
+            <div>
+                <h3>Safety Comes First</h3>
+                <p id="therapy-safety"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="other-section section">
+        <div class="section-heading">
+            <p class="eyebrow">EXPLORE MORE</p>
+            <h2>Other Panchakarma Therapies</h2>
+            <p>Discover the other traditional therapies featured in AyurSutra.</p>
+        </div>
+        <div class="other-grid" id="other-therapies"></div>
+    </section>
+</main>
+
+<footer class="footer">
+    <a href="index.html" class="footer-brand">✦ AyurSutra</a>
+    <p>Supporting organized Panchakarma care through digital management.</p>
+    <p class="footer-note">
+        Educational information only. Treatment decisions require
+        assessment by qualified healthcare professionals.
+    </p>
+</footer>
+
+<script>
+const therapies = {
+    vamana: {
+        title: "Vamana",
+        subtitle: "Therapeutic Emesis in Ayurveda",
+        image: "images/vamana.webp",
+        intro: "Discover Vamana, a traditional Panchakarma procedure described in Ayurveda and considered only under qualified clinical supervision.",
+        description: "Vamana is one of the five traditional Panchakarma procedures. It involves supervised therapeutic emesis in appropriately selected patients. The procedure requires individual assessment and professional monitoring.",
+        purpose: "Traditional Ayurvedic practice associates Vamana with selected Kapha-related imbalances. Its traditional rationale does not establish that it is effective for every condition.",
+        approach: "The traditional framework includes Purva Karma (preparation), Pradhana Karma (main procedure) and Paschat Karma (aftercare). Each stage is planned by a qualified practitioner.",
+        benefits: "Traditional texts describe uses for selected conditions. Evidence for specific clinical benefits varies, and results cannot be guaranteed.",
+        processIntro: "Vamana follows three broad traditional stages. The exact clinical protocol varies according to professional assessment and the patient's circumstances.",
+        steps: [
+            ["01", "Purva Karma — Preparation", "The physician evaluates medical history, symptoms and suitability. When prescribed, preparatory care may include Snehana (oleation) and Swedana (sudation)."],
+            ["02", "Pradhana Karma — Main Procedure", "The prescribed therapeutic procedure is conducted in a suitable clinical setting with qualified supervision and appropriate monitoring. Therapeutic emesis must never be attempted at home."],
+            ["03", "Paschat Karma — Aftercare", "The patient is monitored and given individualized recovery advice. Traditional aftercare may include Samsarjana Krama, a graduated dietary regimen when clinically appropriate."]
+        ],
+        safety: "Vamana intentionally induces vomiting and can cause dehydration, electrolyte disturbances and other serious complications. It must only be considered after professional assessment and must never be attempted at home."
+    },
+
+    virechana: {
+        title: "Virechana",
+        subtitle: "Therapeutic Purgation in Ayurveda",
+        image: "images/virechana.jpg",
+        intro: "Learn about Virechana, a traditional Ayurvedic Panchakarma procedure involving supervised therapeutic purgation.",
+        description: "Virechana is traditionally described as a cleansing procedure involving purgation under professional supervision. Its suitability depends on the individual's health, clinical circumstances and practitioner assessment.",
+        purpose: "In Ayurvedic tradition, Virechana is associated with selected Pitta-related imbalances. This traditional classification is not a substitute for a medical diagnosis.",
+        approach: "The traditional stages are Purva Karma, Pradhana Karma and Paschat Karma. Preparation and clinical management must be individualized.",
+        benefits: "Traditional Ayurvedic sources describe uses for selected conditions. Scientific evidence for specific outcomes varies, and effectiveness should not be assumed.",
+        processIntro: "The traditional framework includes preparation, a professionally supervised therapeutic phase and recovery care.",
+        steps: [
+            ["01", "Purva Karma — Preparation", "The physician assesses the patient and reviews relevant health history. Any preparatory measures are selected according to the patient's condition."],
+            ["02", "Pradhana Karma — Therapeutic Phase", "A qualified practitioner determines whether the procedure is appropriate and manages the prescribed intervention with suitable clinical observation. No purgative regimen should be self-administered for this purpose."],
+            ["03", "Paschat Karma — Recovery", "The patient receives individualized aftercare and follow-up guidance. A graduated dietary regimen may be considered in traditional practice when appropriate."]
+        ],
+        safety: "Purgation can cause dehydration, electrolyte disturbances and interactions with medicines. Do not use purgatives or attempt therapeutic purgation without qualified medical guidance."
+    },
+
+    basti: {
+        title: "Basti",
+        subtitle: "Medicated Enema Therapy in Ayurveda",
+        image: "images/basti.webp",
+        intro: "Explore Basti, a traditional Panchakarma therapy involving the rectal administration of prescribed preparations under professional supervision.",
+        description: "Basti is a traditional Ayurvedic procedure with different methods and formulations. The selected approach depends on clinical assessment, the patient's health and the practitioner's judgment.",
+        purpose: "Ayurvedic tradition associates Basti with selected Vata-related imbalances. The traditional rationale should not be interpreted as proof of effectiveness for a particular disease.",
+        approach: "A qualified practitioner evaluates suitability, selects an appropriate approach and oversees the treatment and subsequent monitoring.",
+        benefits: "Traditional sources describe Basti for selected conditions. Potential outcomes vary, and robust clinical evidence is not available for every claimed benefit.",
+        processIntro: "Basti care is individualized and requires assessment, professionally managed administration and appropriate follow-up.",
+        steps: [
+            ["01", "Purva Karma — Assessment", "The practitioner reviews medical history, symptoms, medications and possible contraindications before considering treatment."],
+            ["02", "Pradhana Karma — Administration", "If clinically appropriate, the prescribed preparation is administered by trained professionals using suitable clinical precautions. This is not a home procedure."],
+            ["03", "Paschat Karma — Follow-up", "The patient is observed as appropriate and receives individualized aftercare instructions and follow-up guidance."]
+        ],
+        safety: "Rectal administration may cause injury, infection, fluid or electrolyte disturbances and other complications. Never attempt Basti at home or use unprescribed preparations."
+    },
+
+    nasya: {
+        title: "Nasya",
+        subtitle: "Nasal Therapy in Ayurveda",
+        image: "images/nasya.jpeg",
+        intro: "Discover Nasya, a traditional Ayurvedic procedure involving selected preparations administered through the nasal route.",
+        description: "Nasya is described in Ayurveda among therapies associated with the head and neck. Different preparations and approaches exist, and suitability must be assessed by a qualified practitioner.",
+        purpose: "Traditional Ayurvedic practice associates Nasya with selected head, neck and upper-body complaints. These traditional uses do not guarantee clinical benefit.",
+        approach: "The practitioner assesses symptoms and health history, determines whether Nasya is appropriate and selects a suitable clinical approach.",
+        benefits: "Traditional practice describes uses for certain nasal and head-related complaints. The evidence supporting particular benefits varies by condition and preparation.",
+        processIntro: "Nasya involves individualized assessment, professional administration when appropriate and observation afterward.",
+        steps: [
+            ["01", "Purva Karma — Assessment", "The practitioner reviews symptoms, allergies, medications and relevant medical history to determine suitability."],
+            ["02", "Pradhana Karma — Administration", "When indicated, the selected preparation is administered by a qualified practitioner using an appropriate method and suitable precautions."],
+            ["03", "Paschat Karma — Aftercare", "The practitioner checks the patient's response and provides individualized aftercare instructions and advice about follow-up."]
+        ],
+        safety: "Nasal preparations may cause irritation, allergic reactions or respiratory complications. Do not put oils or other substances into the nose without appropriate professional guidance."
+    },
+
+    raktamokshana: {
+        title: "Raktamokshana",
+        subtitle: "Traditional Bloodletting in Ayurveda",
+        image: "images/Rakta.jpg",
+        intro: "Learn about Raktamokshana, a traditional Ayurvedic procedure involving selected bloodletting methods in a clinical setting.",
+        description: "Raktamokshana is described in traditional Ayurveda as one of the five Panchakarma procedures. Different methods have been described historically, but any intervention involving blood requires careful clinical consideration.",
+        purpose: "Traditional texts describe selected uses for Raktamokshana. These historical descriptions should not be interpreted as proof that bloodletting treats a particular disease.",
+        approach: "Professional assessment, consideration of contraindications, appropriate infection-control precautions and monitoring are essential before any intervention is considered.",
+        benefits: "Specific benefits are not established for all traditional indications. Risks and alternatives should be discussed with a qualified healthcare professional.",
+        processIntro: "The traditional framework emphasizes careful assessment, a professionally selected approach and post-procedure monitoring. Actual clinical decisions depend on the individual case.",
+        steps: [
+            ["01", "Purva Karma — Assessment", "The practitioner reviews medical history and evaluates factors such as bleeding risk, anemia, medications and possible contraindications."],
+            ["02", "Pradhana Karma — Clinical Intervention", "Any intervention is considered only by appropriately qualified professionals in a suitable setting with sterile equipment and necessary safeguards."],
+            ["03", "Paschat Karma — Monitoring", "Appropriate observation, wound care when relevant and follow-up are arranged according to the procedure and the patient's condition."]
+        ],
+        safety: "Bloodletting can cause bleeding, infection, fainting, anemia and other serious complications. It must never be performed at home. Discuss the risks, evidence and alternatives with a qualified healthcare professional."
+    }
+};
+
+const params = new URLSearchParams(window.location.search);
+const requestedName = (params.get("name") || "vamana").toLowerCase();
+const therapy = therapies[requestedName];
+
+if (!therapy) {
+    document.querySelector("main").innerHTML =
+        '<section class="section not-found"><h1>Therapy not found</h1><p>Please return to the homepage and select a Panchakarma therapy.</p><a class="primary-btn" href="index.html">Back to Home</a></section>';
+} else {
+    document.title = therapy.title + " | AyurSutra";
+
+    document.getElementById("therapy-title").textContent = therapy.title;
+    document.getElementById("therapy-subtitle").textContent = therapy.subtitle;
+    document.getElementById("therapy-intro").textContent = therapy.intro;
+    document.getElementById("overview-name").textContent = therapy.title;
+    document.getElementById("therapy-description").textContent = therapy.description;
+    document.getElementById("therapy-purpose").textContent = therapy.purpose;
+    document.getElementById("therapy-approach").textContent = therapy.approach;
+    document.getElementById("therapy-benefits").textContent = therapy.benefits;
+    document.getElementById("process-heading").textContent = "How " + therapy.title + " Is Performed";
+    document.getElementById("process-intro").textContent = therapy.processIntro;
+    document.getElementById("therapy-safety").textContent = therapy.safety;
+
+    const image = document.getElementById("therapy-image");
+    image.src = therapy.image;
+    image.alt = therapy.title + " traditional therapy";
+    image.onerror = function () {
+        this.onerror = null;
+        this.src = "images/hero.png";
+    };
+
+    const stepsContainer = document.getElementById("process-steps");
+
+    therapy.steps.forEach(([number, heading, description]) => {
+        const article = document.createElement("article");
+        article.className = "procedure-step";
+
+        const marker = document.createElement("div");
+        marker.className = "step-marker";
+        marker.textContent = number;
+
+        const content = document.createElement("div");
+        content.className = "step-content";
+
+        const title = document.createElement("h3");
+        title.textContent = heading;
+
+        const paragraph = document.createElement("p");
+        paragraph.textContent = description;
+
+        content.append(title, paragraph);
+        article.append(marker, content);
+        stepsContainer.appendChild(article);
+    });
+
+    const otherContainer = document.getElementById("other-therapies");
+
+    Object.entries(therapies)
+        .filter(([key]) => key !== requestedName)
+        .forEach(([key, item]) => {
+            const link = document.createElement("a");
+            link.className = "other-card";
+            link.href = "therapy.html?name=" + key;
+
+            const heading = document.createElement("h3");
+            heading.textContent = item.title;
+
+            const arrow = document.createElement("span");
+            arrow.textContent = "Explore therapy →";
+
+            link.append(heading, arrow);
+            otherContainer.appendChild(link);
+        });
+}
+</script>
+
+</body>
+</html>
+

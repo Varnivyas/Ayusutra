@@ -1,0 +1,482 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #176f50;
+    --dark-green: #173f32;
+    --light-green: #e8f3eb;
+    --cream: #fbfdf9;
+    --text: #65776e;
+    --border: #e1ebe3;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: var(--dark-green);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: var(--cream);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--dark-green);
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+}
+
+.brand small {
+    display: block;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.back-link {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.therapy-hero {
+    padding: 65px 6% 85px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.25;
+}
+
+.hero-content h1 {
+    font-size: clamp(45px, 5vw, 70px);
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.hero-content h2 {
+    font-family: Arial, sans-serif;
+    color: var(--green);
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.intro {
+    color: var(--text);
+    font-size: 16px;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 40px;
+    background: var(--green);
+    color: white;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: var(--dark-green);
+}
+
+.hero-image-wrap {
+    padding: 12px;
+    background: var(--light-green);
+    border-radius: 44% 44% 22px 22px;
+    min-width: 0;
+}
+
+.hero-image-wrap img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 44% 44% 18px 18px;
+}
+
+.section {
+    padding: 75px 6%;
+}
+
+.overview {
+    text-align: center;
+    background: white;
+}
+
+.overview h2,
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    margin-bottom: 22px;
+}
+
+.section-intro {
+    max-width: 850px;
+    margin: 0 auto;
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 80px;
+}
+
+.info-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    background: var(--cream);
+    border-radius: 20px;
+    transition: transform 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background: var(--light-green);
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.info-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.process-section {
+    background: #f1f7f1;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-heading > p:last-child {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.procedure-timeline {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.procedure-step {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 24px;
+    position: relative;
+    padding-bottom: 32px;
+}
+
+.step-marker {
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px #176f5020;
+}
+
+.procedure-step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    left: 27px;
+    border-left: 2px dashed #b8d3bf;
+}
+
+.step-content {
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #173f3208;
+}
+
+.step-content h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.step-content p {
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.safety-box {
+    max-width: 950px;
+    margin: 12px auto 0;
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background: #fff8e9;
+    border: 1px solid #f0e5ca;
+    border-radius: 16px;
+}
+
+.safety-box > span {
+    color: #926d2b;
+    font-size: 25px;
+}
+
+.safety-box h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.safety-box p {
+    color: #725b35;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.other-section {
+    background: white;
+}
+
+.other-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.other-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    color: var(--dark-green);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.other-card:hover {
+    border-color: var(--green);
+    transform: translateY(-3px);
+}
+
+.other-card h3 {
+    font-size: 21px;
+}
+
+.other-card span {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.footer {
+    padding: 40px 6%;
+    text-align: center;
+    background: var(--light-green);
+}
+
+.footer-brand {
+    display: inline-block;
+    color: var(--dark-green);
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.footer .footer-note {
+    max-width: 700px;
+    margin: 12px auto 0;
+}
+
+.not-found {
+    text-align: center;
+}
+
+.not-found p {
+    margin: 20px 0;
+    color: var(--text);
+}
+
+@media (max-width: 850px) {
+    .therapy-hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-image-wrap img {
+        height: 330px;
+    }
+
+    .information {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .brand {
+        font-size: 22px;
+        gap: 8px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand small {
+        max-width: 190px;
+        font-size: 9px;
+    }
+
+    .back-link {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .therapy-hero {
+        padding: 40px 5% 55px;
+    }
+
+    .hero-image-wrap img {
+        height: 260px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .information,
+    .other-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .information {
+        padding-top: 0;
+    }
+
+    .procedure-step {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 12px;
+        padding-bottom: 25px;
+    }
+
+    .step-marker {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .procedure-step:not(:last-child)::after {
+        top: 42px;
+        left: 20px;
+    }
+
+    .step-content {
+        padding: 20px;
+    }
+
+    .step-content h3 {
+        font-size: 21px;
+    }
+
+    .safety-box {
+        padding: 18px;
+    }
+
+    .other-card {
+        padding: 19px;
+    }
+
+    .other-card h3 {
+        font-size: 19px;
+    }
+}
